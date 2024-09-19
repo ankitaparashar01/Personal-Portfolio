@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b26504e8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!----------------------HOME---------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.png" class="logo">
+                <ul class="navbar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Ankita Parashar.</span></h1>
+                <p id="header-text-loop"></p>
+            </div>
+
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    const headerTexts = ['I am a <span>Developer</span>', 'I am a <span>Trailblazer</span>', 'I am a <span>Challenger</span>', 'I am a <span>Leader</span>'];
+                    let currentIndex = 0;
+                    const headerTextElement = document.querySelector('#header-text-loop');
+
+                    setInterval(() => {
+                        headerTextElement.innerHTML = headerTexts[currentIndex];
+                        currentIndex = (currentIndex + 1) % headerTexts.length;
+                    }, 1500);
+                });
+            </script>
+        </div>
+    </div>
+
+    <!----------------------ABOUT ME---------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/About.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! I'm <span class ="bold">Ankita Parashar</span>, pursuing a <span class= "underline">Bachelors's of Engineering in Computer Science </span> and a <span class= "underline">Masters of Science in Technology Entrepreneurship</span> at SUTD. I thrive on connecting with people in aspects of culture and academics. I love embracing uncertainty and seeking new experiences to stretch my potential.<br><br>
+                    When I'm not exploring new ventures, you can find me listening to podcasts, trying a new restaurant, learning new dance choreographies or watching a rom-com.<br><br>
+                    If you're looking for a results-driven, passionate individual ready to take on the world of tech and entrepreneurship, you've found your person!<br><br>
+                    Let's connect and make amazing things happen together.</p>
+                        
+                    <div class="tab-titles">
+                        <p class= "tab-links active-link" onclick="opentab('software')"><i class="fa-solid fa-code"></i> Software</p>
+                        <p class= "tab-links" onclick="opentab('web-design')"><i class="fa-regular fa-window-maximize"></i> Web Design</p>
+                        <p class= "tab-links" onclick="opentab('graphic-design')"><i class="fa-sharp fa-solid fa-crop-simple"></i> Graphic Design</p>
+                        <!-- <p class= "tab-links" onclick="opentab('supply-chain')"><i class="fa-solid fa-link"></i> Supply Chain</p> -->
+                    </div>
+                        <div class="tab-contents active-tab" id="software">                            
+                            <ul>
+                                    <li><span>Python | Java | JavaScript</span></li>
+                                    <br>
+                                    <li><span>Machine Learning</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="web-design">                            
+                            <ul>
+                                    <li><span>React | Angular | HTML | CSS | XML</span><br>Frontent Markup/Frameworks</li>
+                                    <li><span>Flask | Django | FastAPI | Node.js | Springboot</span><br>Backend Frameworks</li>
+                                    <li><span>MySQL | MongoDB</span><br>Database</li>
+                                    <li><span>Amazon Web Services | Azure Web Services</span><br>Cloud Technologies</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="graphic-design">                            
+                            <ul>
+                                    <li><span>Figma</span><br> Wireframing prototype designs with UI/UX</li>
+                                    <br>
+                                    <li><span>Canva</span><br> Designing web/app interfaces </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------EDUCATION---------------------->
+    <div id="education">
+        <div class="container">
+            <h1 class="sub-title">Education</h1>
+            <div class="education-list">
+                <div class="education-item">
+                    <h2>Singapore University of Technology and Design (SUTD)</h2>
+                    <p> <span class="bold">2020 - 2025</span><br>
+                        <span class="bold">Bachelors in Computer Science & Masters of Science in Technology Entrepreneurship </span><br>
+                        STEP Scholarship <br>
+                        UC Berkeley US Exchange [Jan 2023 - Aug 2023] <br>
+                        Aalto University Finland Exchange [Sep 2023 - Dec 2023]</p>
+                </div>
+    
+                <div class="education-item">
+                    <h2>Victoria Junior College</h2>
+                    <p><span class="bold">2018 - 2019</span><br>
+                        Physics, Chemistry, Maths, Economics, General Paper, Project Work, Hindi <br>
+                        Indian Cultural Society President</p>
+                </div>
+    
+                <div class="education-item">
+                    <h2>Cedar Girls' Secondary School</h2>
+                    <p><span class="bold">2013 - 2017</span> <br>
+                        Triple science, A-Maths, E-Maths, Geography, Social Science, English, Hindi <br>
+                        Modern Dance<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!----------------------PROJECTS---------------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="projects-list">
+                <!--------------GOBBLE-------------->
+                <div class="project">
+                    <div class="project-img">
+                        <img src="Images/Spotify.jpg" alt="Spotify">
+                    </div>
+                    <div class="project-details">
+                        <h2>Music Emotion Recognition</h2>
+                        <p>Prediction of emotions based on algorithms tested on Spotify most recently played songs.</p>
+                    </div>
+                    <div class="layer">
+                        <h3>SUTD Project</h3>
+                        <a href="https://github.com/Vemrthiss/cds-emoteam"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!--------------HEXLE-------------->
+                <div class="project">
+                    <div class="project-img">
+                        <img src="Images/Ascenda.png" alt="Ascenda">
+                    </div>
+                    <div class="project-details">
+                        <h2>Ascenda Hotel Website</h2>
+                        <p>Full-stack hotel website</p>
+                    </div>
+                    <div class="layer">
+                        <h3>SUTD Project</h3>
+                        <a href="https://github.com/ankitaparashar01/ESC_Term5"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!--------------GHI-------------->
+                <div class="project">
+                    <div class="project-img">
+                        <img src="Images/MUGR.png" alt="MUGR">
+                    </div>
+                    <div class="project-details">
+                        <h2>Mugr Android App</h2>
+                        <p>Study Buddy Android Application</p>
+                    </div>
+                    <div class="layer">
+                        <h3>SUTD Project</h3>
+                        <a href="https://github.com/ankitaparashar01/FirebaseApp" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!--------------DTI-------------->
+                <div class="project">
+                    <div class="project-img">
+                        <img src="Images/SMF.png" alt="SMF">
+                    </div>
+                    <div class="project-details">
+                        <h2>MSC Hackathon</h2>
+                        <p>2nd Runner Up</p>
+                    </div>
+                    <div class="layer">
+                        <h3>Hackathon</h3>
+                        <p>Gamified application to train the staff at MSC</p>
+                        <a href="https://github.com/ankitaparashar01/MSC-Hackathon/tree/master" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!--------------CODEEXP-------------->
+                <div class="project">
+                    <div class="project-img">
+                        <img src="Images/covid.jpeg" alt="Covid">
+                    </div>
+                    <div class="project-details">
+                        <h2>ML Predictions</h2>
+                        <p>Predictions of deaths during Covid-19 using ML algorithms</p>
+                    </div>
+                    <div class="layer">
+                        <h3>SUTD Project</h3>
+                        <a href="https://github.com/s4nat/toodee/blob/main/Task%201%20and%202/Task%201%20and%20Task%202%20Final%20Report.ipynb" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!----------------------EXPERIENCES---------------------->
+    <div id="experiences">
+        <div class="container">
+            <h1 class="sub-title">Experiences</h1>
+            <div class="timeline">
+
+                <!--------------RAKUTEN-------------->
+                <div class="experience">
+                    <div class="summary-content">
+                        <img src="Images/Rakuten.png" alt="Rakuten Logo" class="company-logo">
+                        <h2>SDET Intern<br><span><a href="https://www.rakuten.com/" target="_blank">RAKUTEN</a></span></h2>
+                        <p>Singapore</p>
+                        <p>JUN 2024 – SEP 2024</p>
+                    </div>
+                    <div class="details">
+                        <p>End to end Automation Testing Framework to verify data consistency across different channels and platforms.</p>
+                        
+                        <div class="skills">
+                            <div class="skill-badge">Springboot Web Development</div>
+                            <div class="skill-badge">Test Automation using Selenium and Cucumber</div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!--------------DEXTRAL-------------->
+                <div class="experience">
+                    <div class="summary-content">
+                        <img src="Images/Dextral.png" alt="Dextral Logo" class="company-logo">
+                        <h2>SWE Intern<br><span><a href="https://www.dextral.app/" target="_blank">DEXTRAL AI</a></span></h2>
+                        <p>San Fransisco Bay Area</p>
+                        <p>MAY 2023 – JAN 2024</p>
+                    </div>
+                    <div class="details">
+                        <p>Programmed an embeddable document editor to reduce government proposal application durations.</p>
+                        
+                        <div class="skills">
+                            <div class="skill-badge">FastAPI</div>
+                            <div class="skill-badge">React</div>
+                            <div class="skill-badge">MySQL</div>
+                            <div class="skill-badge">OpenAI</div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+                <!--------------HERON TECHNOLOGY-------------->
+                <div class="experience">
+                        <div class="summary-content">
+                            <img src="Images/HeronTech.png" alt="Heron Logo" class="company-logo">
+                            <h2>SWE INTERN<br><span><a href="https://heron-technology.com/" target="_blank">HERON TECHNOLOGY</a></span></h2>
+                            <p>AUG 2022 – DEC 2022</p>
+                        </div>
+
+                    <div class="details">
+                        <p>Programmed a drone routing mobile app</p>
+
+                        <div class="skills">
+                            <div class="skill-badge">React Native</div>
+                            <div class="skill-badge">Amazon Web Services</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--------------SIA-------------->
+                <div class="experience">
+                        <div class="summary-content">
+                            <img src="Images/SQ.png" alt="SQ Logo" class="company-logo">
+                            <h2>Associate Intern<br><span><a href="https://www.singaporeair.com/en_UK/sg/home#" target="_blank">SINGAPORE AIRLINES</a></span></h2>
+                            <p>FEB 2020 – APR 2020</p>
+                        </div>
+
+                    <div class="details">
+                        <p>Led the work-injury insurance claiming process for SQ Staff</p>
+                        
+                        <div class="skills">
+                            <div class="skill-badge">Business Recovery</div>
+                            <div class="skill-badge">SAP</div>
+                            <div class="skill-badge">MS Office</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!----------------------CONTACT---------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact</h1>
+    
+                    <div class="social-icons">
+                        <a href="mailto:ankitasushilparashar@gmail.com" class="icon-link">
+                            <i class="fa-regular fa-envelope"></i>
+                            <p>ankitasushilparashar@gmail.com</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ankitaparashar01/" target="_blank" class="icon-link">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <p>Ankita Parashar</p>
+                        </a>
+                        <a href="https://github.com/ankitaparashar01" target="_blank" class="icon-link">
+                            <i class="fa-brands fa-github"></i>
+                            <p>ankitaparashar01</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                    <div class="back-to-top">
+                        <a href="#header">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <p>Back to top</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!----------------------CURSOR---------------------->
+
+    <div id="cursor-pointer"></div>
+    <div id="cursor-halo"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursorPointer = document.getElementById('cursor-pointer');
+            const cursorHalo = document.getElementById('cursor-halo');
+        
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX + window.pageXOffset;
+                const y = e.clientY + window.pageYOffset;
+
+                cursorPointer.style.left = x + 'px';
+                cursorPointer.style.top = y + 'px';
+                cursorHalo.style.left = x + 'px';
+                cursorHalo.style.top = y + 'px';
+            });
+        
+            // Optional: Add a scaling effect when clicking
+            document.addEventListener('mousedown', () => {
+                cursorHalo.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            });
+        
+            document.addEventListener('mouseup', () => {
+                cursorHalo.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+    </script>
+
+    <!----------------------JS---------------------->
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw6JDIA36BbKS3hVtRH1a51gUvyOKFuLmm7ddqL1_aLOx6jcKthptVCOL7n4Fd82ei-/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        const formData = new FormData(form); // Create FormData object containing all form fields
+        fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset();
+                }
+        )
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+
+</body>
+</html>
